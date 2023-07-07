@@ -37,6 +37,24 @@ module.exports = {
         marquee: {
           '0%': { transform: 'translateX(30%)' },
           '100%': { transform: 'translateX(-100%)' },
+        },
+        radio: {
+          '0%': {transform: 'scale(1.0)'},
+          '10%': {transform: 'scale(1.22)'},
+          '20%': {transform: 'scale(1.44)'},
+          '30%': {transform: 'scale(1.66)'},
+          '40%': {transform: 'scale(1.88)'},
+          '50%': {transform: 'scale(2.1)'},
+          '60%': {transform: 'scale(2.32)'},
+          '70%': {transform: 'scale(2.54)'},
+          '80%': {transform: 'scale(2.76)'},
+          '90%': {transform: 'scale(2.98)'},
+          '100%': {transform: 'scale(3.2)'},
+        },
+        pop: {
+          '0%,': { transform: 'scale(0.8)' },
+          '50%': { transform: 'scale(1.0)' },
+          '100%': { transform: 'scale(1.2)' },
         }
     },
     animation:{
@@ -45,10 +63,14 @@ module.exports = {
         stem: 'stem 0.5 linear infinite',
         splat: 'splat 0.5s linear infinite',
         marquee: 'marquee 25s linear infinite',
+        radio: 'radio 1.2s linear infinite',
+        pop: 'pop 0.5s linear infinite'
     },
     },
   },
-  plugins: [],
+  plugins: [
+    require("tailwindcss-animation-delay"),
+  ],
 }
 
 

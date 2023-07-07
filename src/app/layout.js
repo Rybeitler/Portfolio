@@ -1,7 +1,12 @@
+import Nav from '@/components/nav/Nav'
 import './globals.css'
 import { Space_Grotesk } from 'next/font/google'
+import { ThemeProvider } from '@/context/ThemeContext'
+import Footer from '@/components/footer/Footer'
 
-const sg = Space_Grotesk({ 
+
+
+const sg = Space_Grotesk({
   subsets: ['latin'],
   weight: ['400', '700']
 })
@@ -14,7 +19,13 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-      <body className={sg.className}>{children}</body>
+      <body className={sg.className}>
+        <ThemeProvider>
+          <Nav />
+          {children}
+          <Footer/>
+        </ThemeProvider>
+      </body>
     </html>
   )
 }
