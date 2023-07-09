@@ -40,7 +40,7 @@ const Nav = () => {
 
     return (
         <div className=' h-50 w-full flex justify-between items-center py-5 px-10 '>
-            <h1 className='text-8xl bg-gradient-to-b from-blue-500 to-slate-400' style={{ '-webkit-background-clip': 'text', '-webkit-text-fill-color': 'transparent' }}>Ryan Beitler</h1>
+            <h1 className='text-8xl bg-gradient-to-b from-blue-500 to-slate-400' style={{ 'WebkitBackgroundClip': 'text', 'WebkitTextFillColor': 'transparent' }}>Ryan Beitler</h1>
             <div className='flex items-center m-3'>
                 <div>
                     {
