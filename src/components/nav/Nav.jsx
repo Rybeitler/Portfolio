@@ -3,6 +3,7 @@ import React, { useEffect } from 'react'
 import { usePathname } from 'next/navigation'
 import DarkModeToggle from '../DarkModeToggle/DarkModeToggle'
 import Link from 'next/link'
+import { pacifico } from '../../app/fonts.js'
 
 const Nav = () => {
     const pathname = usePathname()
@@ -40,7 +41,7 @@ const Nav = () => {
 
     return (
         <div className=' h-50 w-full flex justify-between items-center py-5 px-10 '>
-            <h1 className='text-8xl bg-gradient-to-b from-blue-500 to-slate-400' style={{ 'WebkitBackgroundClip': 'text', 'WebkitTextFillColor': 'transparent' }}>Ryan Beitler</h1>
+            <h1 className='pacifico text-8xl bg-gradient-to-b from-blue-500 to-slate-400' style={{ 'fontFamily':pacifico,'WebkitBackgroundClip': 'text', 'WebkitTextFillColor': 'transparent' }}>Ryan Beitler</h1>
             <div className='flex items-center m-3'>
                 <div>
                     {

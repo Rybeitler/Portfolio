@@ -2,13 +2,13 @@
 import React, { useState } from 'react'
 import Link from "next/link";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import Rain from '../components/rain/Rain'
 import circle from '../../public/circle-regular.svg'
 
 import {
   faGear,
 } from "@fortawesome/free-solid-svg-icons";
 import Image from 'next/image';
+import RainComponent from '@/components/RainComponent/RainComponent';
 
 export default function Home() {
   const [hoverOne, setHoverOne] = useState(false)
@@ -18,12 +18,12 @@ export default function Home() {
   
   return (
     <main className="flex flex-col h-[90vh] px-24 py-5 sm:flex-row">
-      <div className='w-2/5 m-4 p-4 rounded-lg h-full flex flex-col justify-between items-center border-t-2 border-b-2 border-blue-300'>
-        <h2 className='text-8xl'>Full Stack Web Developer</h2>
+      <div className='w-2/5 h-[80vh] m-4 p-4 rounded-lg h-full flex flex-col justify-between items-center  border-b-2 border-blue-300'>
+        <h2 className='text-7xl'>Full Stack Web Developer</h2>
         <div>
           {
             !skills?
-                  <p className="text-3xl">paragraph here about me</p>
+                  <p className="text-3xl"><span className='italic'>"Simplicity is the ultimate sophistication."</span> - Leonardo da Vinci</p>
                   :
                   <div className='flex flex-wrap'>
                     <a className='h-30 w-30' href="https://docs.microsoft.com/en-us/dotnet/csharp/" target="_blank" rel="noreferrer"><img className='w-[8rem] h-[8rem]' src="https://raw.githubusercontent.com/danielcranney/readme-generator/main/public/icons/skills/csharp-colored.svg" width="36" height="36" alt="C#" /></a>
@@ -55,7 +55,7 @@ export default function Home() {
           My Skills
         </button>
       </div>
-      <div className='w-3/5 m-4 grid grid-cols-1 sm:w-full'>
+      <div className='w-3/5 m-4 grid grid-cols-1 h-[80vh] sm:w-full'>
         <Link href='/projects'
           className="bg-red-200 m-4 rounded-lg flex justify-center items-center h-[25rem] sm:w-full"
           onMouseEnter={() => setHoverOne(true)}
@@ -117,11 +117,18 @@ export default function Home() {
           </div>
         </Link>
 
-        <Link href='/resume' className='rain bg-blue-200 m-4 rounded-lg flex justify-center items-center h-[25rem] sm:w-full '>
-          <div className=''>
-            <p className="text-slate-700 text-bold text-9xl">RESUME</p>
-            {/* <Rain/> */}
-          </div>
+        <Link href='/resume' className='relative bg-blue-200 m-4 rounded-lg flex justify-center items-center h-[25rem] sm:w-full '
+            onMouseEnter={() => setHoverThree(true)}
+            onMouseLeave={() => setHoverThree(false)}
+        >
+              <p className="absolute text-slate-700 text-bold text-9xl">RESUME</p>
+                  {
+                    hoverThree &&
+                  <RainComponent className='absolute'/>
+                  }
+                  
+
+
         </Link>
       </div>
     </main>

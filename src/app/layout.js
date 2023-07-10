@@ -1,15 +1,12 @@
 import Nav from '@/components/nav/Nav'
 import './globals.css'
-import { Space_Grotesk } from 'next/font/google'
+import {sg} from './fonts.js'
 import { ThemeProvider } from '@/context/ThemeContext'
 import Footer from '@/components/footer/Footer'
 
 
 
-const sg = Space_Grotesk({
-  subsets: ['latin'],
-  weight: ['400', '700']
-})
+
 
 export const metadata = {
   title: 'Create Next App',
@@ -21,7 +18,7 @@ export default function RootLayout({ children }) {
     <html lang="en">
       <body className={sg.className}>
         <ThemeProvider>
-          <Nav />
+          <Nav/>
           {children}
           <Footer/>
         </ThemeProvider>

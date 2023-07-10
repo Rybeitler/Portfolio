@@ -1,0 +1,45 @@
+.rainContainer {
+    position: relative;
+    width: 90%;
+    height: 90%;
+    overflow: hidden;
+    background-color: inherit;
+}
+
+.raindrop {
+    position: absolute;
+
+    animation: falling 1.5s linear infinite;
+}
+
+@keyframes falling {
+    0% {
+        transform: translateY(-100px);
+    }
+
+    100% {
+        transform: translateY(100vh);
+
+    }
+}
+
+/* .stem {
+    width: 1px;
+    height: 30px;
+    background-color: black;
+} */
+
+.raindropIcon {
+    width: 10px;
+    height: 20px;
+    fill: blue;
+}
+
+.centeredText {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 4rem;
+    color: #334155;
+}
