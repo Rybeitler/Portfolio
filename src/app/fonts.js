@@ -8,5 +8,5 @@ export const sg = Space_Grotesk({
 export const pacifico = Pacifico({
     subsets: ['latin'],
     weight: ['400'],
-    variable: "--font-pacifico"
+    
 })

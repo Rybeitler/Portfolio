@@ -15,10 +15,10 @@ const Projects = async () => {
         <div className='container p-6 mx-auto'>
             <div className='grid grid-rows-1 md:grid-rows-2 lg:grid-rows-3 gap-6'>
                 {projects.map(item => (
-                    <div key={item.id} className='gap-4 flex items-center rounded-lg border-t-2 border-blue-300 p-5'>
-                        <div className='flex flex-col w-1/2 pl-6'>
+                    <div key={item.id} className='gap-4 flex flex-col md:flex-row items-center justify-center rounded-lg border-t-2 border-blue-300 p-1 md:p-3 lg:p-5'>
+                        <div className='flex flex-col justify-center items-center md:justify-start w-1/2 pl-6'>
                             <Link href={item.url}>
-                                <h2 className='text-5xl mb-2 font-bold'>{item.name}</h2>
+                                <h2 className='text-5xl mb-2 text-center font-bold'>{item.name}</h2>
                             </Link>
                             <p className='text-2xl mb-2'>{item.description}</p>
                             <Image className='object-fill h-30 w-30' src={item.openGraphImageUrl} height={200} width={600} alt={"openGraphImage"} />
